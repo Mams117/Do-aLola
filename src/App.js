@@ -1,74 +1,28 @@
-import "./App.css";
+
 import "bootstrap/dist/css/bootstrap.css";
+import Agregar from "./Componentes/Agregar";
+import { useEffect, useState } from "react";
 function App() {
+
+  const [datos,setDatos]=useState([]);
   return (
     <>
       <body>
-        <header>
-          <h1 className="site-heading text-center text-faded d-none d-lg-block">
-            <span className="site-heading-upper  mb-3">Tiendita Doña Lola</span>
+        <nav >
+          <h1  className="site-heading text-center text-faded d-none d-lg-block">
+            <span className="site-heading-upper  mb-3">Las mejores Recetas de Doña Lola</span>
             <span className="site-heading-lower">
               Bienvenidos a tus recetas favoritas
             </span>
           </h1>
-        </header>
-
-        <nav
-          className="navbar navbar-expand-lg navbar-dark py-lg-4"
-          id="mainNav"
-        >
-          <div className="container">
-            <a
-              className="navbar-brand text-uppercase fw-bold d-lg-none"
-              href="index.html"
-            >
-              Start Bootstrap
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav mx-auto">
-                <li className="nav-item px-lg-4">
-                  <a className="nav-link text-uppercase" href="index.html">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item px-lg-4">
-                  <a className="nav-link text-uppercase" href="about.html">
-                    About
-                  </a>
-                </li>
-                <li className="nav-item px-lg-4">
-                  <a className="nav-link text-uppercase" href="products.html">
-                    Products
-                  </a>
-                </li>
-                <li className="nav-item px-lg-4">
-                  <a className="nav-link text-uppercase" href="store.html">
-                    Store
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </nav>
+
+      
         <section className="page-section about-heading">
           <div className="container">
             <img
-              className="img-fluid rounded about-heading-img mb-3 mb-lg-0"
-              srcSet="img/about.jpg"
+              className="img-fluid rounded about-heading-img mb-4 mb-0"
+              srcSet="img/cheff.jpg"
               alt="..."
             />
             <div className="about-heading-content">
@@ -77,37 +31,30 @@ function App() {
                   <div className="bg-faded rounded p-5">
                     <h2 className="section-heading mb-4">
                       <span className="section-heading-upper">
-                        Strong Coffee, Strong Roots
+                        Quienes
                       </span>
                       <span className="section-heading-lower">
-                        About Our Cafe
+                        Que tipo de resetas puedes agregar?
                       </span>
                     </h2>
                     <p>
-                      Founded in 1987 by the Hernandez brothers, our
-                      establishment has been serving up rich coffee sourced from
-                      artisan farmers in various regions of South and Central
-                      America. We are dedicated to travelling the world, finding
-                      the best coffee, and bringing back to you here in our
-                      cafe.
+                      En este apartado, puedes agregar cualquier reseta de tu agrado, para que puedas compartir con los demas las diferentes recetas de cada platillo y puedas comparar con otros 
                     </p>
-                    <p className="mb-0">
-                      We guarantee that you will fall in
-                      <em>lust</em>
-                      with our decadent blends the moment you walk inside until
-                      you finish your last sip. Join us for your daily routine,
-                      an outing with friends, or simply just to enjoy some alone
-                      time.
-                    </p>
+                    
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+
+<Agregar datos={datos} setDatos={setDatos} />
+
+
         <footer className="footer text-faded text-center py-5">
           <div className="container">
-            <p className="m-0 small">Copyright &copy; Your Website 2023</p>
+            <p className="m-0 small">Miranda&copy; Pagina web hecha en  2023</p>
           </div>
         </footer>
 
