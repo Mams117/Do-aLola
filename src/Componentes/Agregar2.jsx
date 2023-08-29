@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
- const Agregar = ({datos,setDatos}) => {
+ const Agregar2 = ({datos,setDatos}) => {
 
 
 const guardarLocalStorage=(informacionFormulario)=>{
@@ -21,14 +21,20 @@ if (Array.isArray(elementos)) {
     e.preventDefault();
 
     let receta=e.target.receta;
-    let ingredientes=e.target.receta;
+    let ingrediente1=e.target.ingrediente1;
+    let ingrediente2=e.target.ingrediente2;
+    let ingrediente3=e.target.ingrediente3;
+    let ingrediente4=e.target.ingrediente4;
     let instruciones=e.target.instruciones;
     let imagen=e.target.imagen;
 
     let DatosFormulario={
         id:new Date().getTime(),
         receta:receta.value,
-        ingredientes:ingredientes.value,
+        ingrediente1:ingrediente1.value,
+        ingrediente2:ingrediente2.value,
+        ingrediente3:ingrediente3.value,
+        ingrediente4:ingrediente4.value,
         instruciones:instruciones.value,
         imagen:imagen.value
     }
@@ -84,8 +90,20 @@ if (Array.isArray(elementos)) {
                                            
                                         </div>
 
-                                        <input type="text" name="contact-company" id="ingredientes"
-                                            className="form-control" placeholder="ingredientes" required/>
+                                        <input type="text" name="contact-company" id="ingrediente1"
+                                            className="form-control" placeholder="ingrediente1" required/>
+
+
+                                            <input type="text" name="contact-company" id="ingrediente2"
+                                            className="form-control" placeholder="ingrediente2" required/>
+
+
+                                            <input type="text" name="contact-company" id="ingrediente3"
+                                            className="form-control" placeholder="ingrediente3" required/>
+
+
+                                            <input type="text" name="contact-company" id="ingrediente4"
+                                            className="form-control" placeholder="ingrediente4" required/>
 
                                         <input type="text" name="contact-company" id="instruciones"
                                             className="form-control" placeholder="instruciones" required/>
@@ -130,4 +148,4 @@ if (Array.isArray(elementos)) {
     </> );
  }
   
- export default Agregar;
+ export default Agregar2;

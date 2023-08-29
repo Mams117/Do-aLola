@@ -1,6 +1,8 @@
 
 import "bootstrap/dist/css/bootstrap.css";
-import Agregar from "./Componentes/Agregar";
+import Agregar2 from "./Componentes/Agregar2";
+import ListarRecetetas from "./Componentes/ListarRecetas";
+import Editar from "./Componentes/Editar";
 import { useEffect, useState } from "react";
 function App() {
 
@@ -49,7 +51,10 @@ function App() {
         </section>
 
 
-<Agregar datos={datos} setDatos={setDatos} />
+<Agregar2 datos={datos} setDatos={setDatos} />
+<ListarRecetetas datos={datos} setDatos={setDatos}/>
+
+
 
 
         <footer className="footer text-faded text-center py-5">
